@@ -3,11 +3,11 @@ Mix.install([
 ])
 
 defmodule Router do
-  use Plug.router
+  use Plug.Router
   # plug(Plug.logger)
 
-  plug :match
-  plug :dispatch
+  plug(:match)
+  plug(:dispatch)
 
   get "/" do
     send_resp(conn, 200, "Hello, World!")
